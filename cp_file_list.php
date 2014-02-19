@@ -11,11 +11,11 @@ if (empty($argv[2])) {
 }
 $destination = trim($argv[2]);
 
-$files      = file_get_contents($argv[1]);
-$files_list = explode("\n", $files);
-$files_list = array_filter($files_list, 'strlen');
+$files = file_get_contents($argv[1]);
+$files = explode("\n", $files);
+$files = array_filter($files, 'strlen');
 
-foreach ($files_list as $filepath) {
+foreach ($files as $filepath) {
     $filepath = trim($filepath);
     if (is_file($filepath) || is_dir($filepath)) {
         $command = sprintf("cp -a --parents %s %s 2>&1", $filepath, $destination);
