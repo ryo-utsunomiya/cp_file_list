@@ -2,11 +2,11 @@
 <?php
 
 if (empty($argv[1])) {
-    fputs(STDERR, '1st argument is empty; Pass me a text file which contains file list');
+    fputs(STDERR, "1st argument is empty; Pass me a text file which contains file list\n");
     exit(1);
 }
 if (empty($argv[2])) {
-    fputs(STDERR, '2nd argumentis empty; Pass me a path to destination');
+    fputs(STDERR, "2nd argument is empty; Pass me a path to destination\n");
     exit(1);
 }
 $destination = trim($argv[2]);
