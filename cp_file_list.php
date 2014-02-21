@@ -26,7 +26,7 @@ foreach ($files as $filepath) {
             exit(1);
         }
     } else {
-        fputs(STDERR, "No such file or directory: $filepath");
+        fputs(STDERR, "No such file or directory: $filepath\n");
         exit(1);
     }
 }
