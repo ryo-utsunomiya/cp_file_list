@@ -18,7 +18,9 @@ $files = array_filter($files, 'strlen');
 foreach ($files as $filepath) {
     $filepath = trim($filepath);
     if (is_file($filepath) || is_dir($filepath)) {
-        $command = sprintf("cp -a --parents %s %s 2>&1", $filepath, $destination);
+        $command    = sprintf("cp -a --parents %s %s 2>&1", $filepath, $destination);
+        $output     = array();
+        $return_var = 0;
         exec($command, $outout, $return_var);
         // echo $command, PHP_EOL;
         if ($return_var !== 0) {
