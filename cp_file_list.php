@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * Last modified 2014-03-10
+ * @author Ryo Utsunomiya (https://twitter.com/ryo511)
+ */
+
 if (empty($argv[1])) {
     fputs(STDERR, "1st argument is empty; Pass me a text file which contains file list\n");
     exit(1);
