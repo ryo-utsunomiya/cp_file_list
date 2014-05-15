@@ -20,13 +20,13 @@ $files = file_get_contents($argv[1]);
 $files = explode("\n", $files);
 $files = array_filter($files, 'strlen');
 
+$dry_run = false;
 if (isset($argv[3])) {
     switch ($argv[3]) {
         case '--dry-run':
             $dry_run = true;
             break;
         default:
-            $dry_run = false;
     }
 }
 
